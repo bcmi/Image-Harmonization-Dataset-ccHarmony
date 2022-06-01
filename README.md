@@ -6,7 +6,7 @@
 
 Our dataset **ccHarmony** is a color checker (cc) based image harmonization dataset. In previous datasets like [NUS dataset](https://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) and [Gehler dataset](https://www2.cs.sfu.ca/~colour/data/shi_gehler/), images are captured with a color checker placed in the scene that provides ground truth reference for illumination estimation, as shown in (a) and (b) in the figure below. Based on these datasets, we design a novel transitive way to construct image harmonization dataset (see (c) in the figure below). Specifically, we convert the foreground in a real image to the standard illumination condition, and then convert it to another illumination condition, arriving at a synthetic composite image. In this way, we obtain 4260 pairs of synthetic composite images and ground-truth real images. More details can be found in our research paper. 
 
-<img src='figures/combo.jpg' align="center" width=1024>
+<img src='combo.jpg' align="center" width=800>
 
 ## Research Paper
 
@@ -16,7 +16,7 @@ ccHarmony: Color-checker based Image Harmonization Dataset [[arXiv]]()
 
 Our dataset contains 350 real images and 426 segmented foregrounds, in which each real image has one or two segmented foregrounds. Each foreground is associated with 10 synthetic composite images. Therefore, our dataset has in total 4260 pairs of synthetic composite images and ground-truth real images. We split all pairs into 3080 training pairs and 1180 test pairs. Our dataset can be downloaded from [**Baidu Cloud**](XXX) (access code: XXX). Several example real images and their corresponding synthetic composite images are show below.
 
-<img src='figures/examples.jpg' align="center" width=1024>
+<img src='examples.jpg' align="center" width=800>
 
 ## Experimental Results
 We evaluate several existing image harmonization methods on our ccHarmony dataset. Specifically, given their released models pretrained on iHarmony4 dataset, we finetune their models on the training set of ccHarmony and evaluate on the test set of ccHarmony. 
@@ -24,10 +24,10 @@ We evaluate several existing image harmonization methods on our ccHarmony datase
 |      | MSE | fMSE | PSNR | fPSNR| SSIM |fSSIM | 
 | :--: | :---: | :------: | :-----: | :--------: | :--------: | :--------: | 
 | Composite  | -  |  -  | -  |  - |   - |   - |  
-| DoveNet  | -  |  -  | -  |  - |   - |   - | 
-| BargainNet  | -  |  -  | -  |  - |   - |   - |  
-| RainNet  | -  |  -  | -  |  - |   - |   - |  
-| iSSAM  | -  |  -  | -  |  - |   - |   - |  
+| <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Cong_DoveNet_Deep_Image_Harmonization_via_Domain_Verification_CVPR_2020_paper.pdf">DoveNet</a>  | -  |  -  | -  |  - |   - |   - | 
+| <a href="https://arxiv.org/pdf/2009.09169.pdf">BargainNet</a>  | -  |  -  | -  |  - |   - |   - |  
+| <a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Ling_Region-Aware_Adaptive_Instance_Normalization_for_Image_Harmonization_CVPR_2021_paper.pdf">RainNet</a>  | -  |  -  | -  |  - |   - |   - |  
+| <a href="https://openaccess.thecvf.com/content/WACV2021/papers/Sofiiuk_Foreground-Aware_Semantic_Representations_for_Image_Harmonization_WACV_2021_paper.pdf">iSSAM</a>   | -  |  -  | -  |  - |   - |   - |  
 
 
 ## Other Resources
