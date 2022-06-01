@@ -14,7 +14,7 @@ ccHarmony: Color-checker based Image Harmonization Dataset [[arXiv]]()
 
 ## Dataset
 
-Our dataset contains 350 real images and 426 segmented foregrounds, in which each real image has one or two segmented foregrounds. Each foreground is associated with 10 synthetic composite images. Therefore, our dataset has in total 4260 pairs of synthetic composite images and ground-truth real images. We split all pairs into 3080 training pairs and 1180 test pairs. Our dataset can be downloaded from [**Baidu Cloud**](XXX) (access code: XXX). Several example real images and their corresponding synthetic composite images are show below.
+Our dataset contains 350 real images and 426 segmented foregrounds, in which each real image has one or two segmented foregrounds. Each foreground is associated with 10 synthetic composite images. Therefore, our dataset has in total 4260 pairs of synthetic composite images and ground-truth real images. We split all pairs into 3080 training pairs and 1180 test pairs. Our dataset can be downloaded from [**Baidu Cloud**](https://pan.baidu.com/s/1fs8J5b95snS8p9I8NVXDXg?pwd=lkdf) (access code: lkdf). Several example real images and their corresponding synthetic composite images are show below.
 
 <img src='examples.jpg' align="center" width=800>
 
