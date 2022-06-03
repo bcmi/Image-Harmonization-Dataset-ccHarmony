@@ -10,7 +10,7 @@ Our dataset **ccHarmony** is a color checker (cc) based image harmonization data
 
 ## Research Paper
 
-ccHarmony: Color-checker based Image Harmonization Dataset [[arXiv]]()
+ Haoxu Huang, Li Niu: "*ccHarmony: Color-checker based Image Harmonization Dataset*." arXiv preprint arXiv:2206.00800 (2022) [[pdf]](https://arxiv.org/pdf/2206.00800.pdf) 
 
 ## Dataset
 
