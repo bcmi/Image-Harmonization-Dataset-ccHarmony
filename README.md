@@ -21,6 +21,7 @@ Our dataset contains 350 real images and 426 segmented foregrounds, in which eac
 
 <img src='examples.jpg' align="center" width=800>
 
+
 ## Experimental Results
 We evaluate several existing image harmonization methods on our ccHarmony dataset. Specifically, given their released models pretrained on iHarmony4 dataset, we finetune their models on the training set of ccHarmony and evaluate on the test set of ccHarmony. 
 
@@ -35,6 +36,10 @@ We evaluate several existing image harmonization methods on our ccHarmony datase
 | <a href="https://arxiv.org/pdf/2207.01322.pdf">Harmonizer</a>    |  43.31 | 402.09 | 34.68 | 0.8951 |
 | <a href="https://arxiv.org/pdf/2207.04788.pdf">DCCF</a>   | 29.25 | 259.83 | 36.62 | 0.9094 |
 | <a href="https://arxiv.org/pdf/2308.00356.pdf">GiftNet(Ours)</a>   | 24.55 | 235.20 | 37.59 | 0.9322 |
+
+## Code
+
+Due to commercial collaboration, the code is not allowed to be released. However, an improved version can be found [here](https://github.com/bcmi/DucoNet-Image-Harmonization).
 
 ## Other Resources
 
