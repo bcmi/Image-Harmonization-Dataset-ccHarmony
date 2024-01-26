@@ -11,6 +11,7 @@ This is the official repository for the following paper:
 > Li Niu, Linfeng Tan, Xinhao Tao, Junyan Cao, Fengjun Guo, Teng Long, Liqing Zhang<br>
 > Accepted by **ICCV 2023**.
 
+Our ccHarmony dataset can better reflect natural illumination variation, with closer data distribution to Hday2night in [iHarmony4](https://github.com/bcmi/Image-Harmonization-Dataset-iHarmony4). In the meanwhile, the collection cost of ccHarmony is much lower than Hday2night. **Therefore, ccHarmony strikes a good balance between natural illumination variation and collection cost.**
 
 ## Overview
 
