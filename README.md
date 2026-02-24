@@ -12,6 +12,12 @@ Our ccHarmony dataset can better reflect natural illumination variation, with cl
 
 You can augment ccHarmony dataset using our [SycoNet](https://github.com/bcmi/SycoNet-Adaptive-Image-Harmonization), by synthesizing high-quality composite images for real images.
 
+## Online Demo
+
+Try this [online demo](http://libcom.ustcnewly.com/) for image composition (object insertion) built upon [libcom](https://github.com/bcmi/libcom) toolbox and have fun!
+
+[![]](https://github.com/user-attachments/assets/87416ec5-2461-42cb-9f2d-5030b1e1b5ec)
+
 ## Overview
 
 Our dataset **ccHarmony** is a color checker (cc) based image harmonization dataset. In previous datasets like [NUS dataset](https://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) and [Gehler dataset](https://www2.cs.sfu.ca/~colour/data/shi_gehler/), images are captured with a color checker placed in the scene that provides ground truth reference for illumination estimation, as shown in (a) and (b) in the figure below. Based on these datasets, we design a novel transitive way to construct image harmonization dataset (see (c) in the figure below). Specifically, we convert the foreground in a real image to the standard illumination condition, and then convert it to another illumination condition, arriving at a synthetic composite image. In this way, we obtain 4260 pairs of synthetic composite images and ground-truth real images. More details can be found in our paper. 
