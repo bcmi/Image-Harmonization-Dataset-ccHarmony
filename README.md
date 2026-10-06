@@ -26,18 +26,23 @@ Try this [online demo](http://libcom.ustcnewly.com/) for image composition (obje
 
 Our dataset **ccHarmony** is a color checker (cc) based image harmonization dataset. In previous datasets like [NUS dataset](https://cvil.eecs.yorku.ca/projects/public_html/illuminant/illuminant.html) and [Gehler dataset](https://www2.cs.sfu.ca/~colour/data/shi_gehler/), images are captured with a color checker placed in the scene that provides ground truth reference for illumination estimation, as shown in (a) and (b) in the figure below. Based on these datasets, we design a novel transitive way to construct image harmonization dataset (see (c) in the figure below). Specifically, we convert the foreground in a real image to the standard illumination condition, and then convert it to another illumination condition, arriving at a synthetic composite image. In this way, we obtain 4260 pairs of synthetic composite images and ground-truth real images. More details can be found in our paper. 
 
-<img src='combo.jpg' align="center" width=800>
+<div align="center">
+<img src='combo.jpg'  width=800>
+</div>
 
 ## Dataset
 
 Our dataset contains 350 real images and 426 segmented foregrounds, in which each real image has one or two segmented foregrounds. Each foreground is associated with 10 synthetic composite images. Therefore, our dataset has in total 4260 pairs of synthetic composite images and ground-truth real images. We split all pairs into 3080 training pairs and 1180 test pairs. Our dataset can be downloaded from [**Baidu Cloud**](https://pan.baidu.com/s/1NFESf-pU58-dm9S7n9V9Hg) (access code: bulf) or [Dropbox](https://www.dropbox.com/scl/fo/m3c8qy0bmqm4pv009h0g3/AGTnYomn7B_ChHoIyLVRe6k?rlkey=6odt4hnyf20xsmvy0bfhtgf94&st=bhuh0tfp&dl=0). Several example real images and their corresponding synthetic composite images are show below.
 
-<img src='examples.jpg' align="center" width=800>
-
+<div align="center">
+<img src='examples.jpg' width=800>
+</div>
 
 ## Experimental Results
 We evaluate several existing image harmonization methods on our ccHarmony dataset. Specifically, given their released models pretrained on iHarmony4 dataset, we finetune their models on the training set of ccHarmony and evaluate on the test set of ccHarmony. 
 
+<div align="center">
+  
 |      | MSE | fMSE | PSNR  |fSSIM | 
 | :--: | :---: | :------: | :-----: | :--------: | 
 | <a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Cong_DoveNet_Deep_Image_Harmonization_via_Domain_Verification_CVPR_2020_paper.pdf">DoveNet</a>  |  110.84  |  880.94   | 31.61  |  0.8231 | 
@@ -49,6 +54,28 @@ We evaluate several existing image harmonization methods on our ccHarmony datase
 | <a href="https://arxiv.org/pdf/2207.01322.pdf">Harmonizer</a>    |  43.31 | 402.09 | 34.68 | 0.8951 |
 | <a href="https://arxiv.org/pdf/2207.04788.pdf">DCCF</a>   | 29.25 | 259.83 | 36.62 | 0.9094 |
 | <a href="https://arxiv.org/pdf/2308.00356.pdf">GiftNet(Ours)</a>   | 24.55 | 235.20 | 37.59 | 0.9322 |
+
+</div>
+
+**One motivation of constructing ccHarmony dataset is that it can approximate the natural illumination variation.** Among four subdatasets in iHarmony4, only Hday2night reflects natural illumination variation. Given our model pretrained on iHarmony4, we finetune it on four subdatasets (HCOCO, HFlickr, HAdobe5k, Hday2night) and ccHarmony respectively, and report the performance of finetuned models on Hday2night in the table below. The performance of our model finetuned on ccHarmony is significantly better than the performances finetuned on HCOCO, HFlickr, and HAdobe5k, and even better than Hday2night, probably because ccHarmony is closer to Hday2night and has more training image pairs (3080 in ccHarmony v.s. 311 in Hday2night). 
+
+<div align="center">
+  
+|  | Method          | MSE | fMSE | PSNR |
+|:---:|:---------------:|:---------------:|:----------------:|:--------------:|
+| 1   | w/o FT          | 38.28           | 566.47           | 37.81          |
+| 2   | HCOCO           | 37.53           | 558.92           | 37.83          |
+| 3   | HFlickr         | 39.46           | 569.67           | 37.68          |
+| 4   | HAdobe5k        | 36.82           | 552.27           | 37.85          |
+| 5   | Hday2night      | 35.48           | 545.28           | 37.89          |
+| 6   | ccHarmony       | **30.11**       | **489.94**       | **38.19**      |
+
+</div>
+Additionally, we show the harmonization results of row 5 and row 6 for comparison in the figure below, which shows that the model finetuned on ccHarmony can achieve better results that are closer to the ground-truth. 
+
+<div align="center">
+<img src='Hday2night_results.jpg' width=500>
+</div>
 
 ## Code
 
